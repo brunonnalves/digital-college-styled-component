@@ -1,5 +1,4 @@
-import { ChangeEvent, KeyboardEvent, useState } from "react";
-import { CommentBar, CommentButton, CommentContainer, CommentInput, CommentsContainer } from "./styles";
+import {  KeyboardEvent, useState } from "react";
 
 export interface IcommentsList {
     key: number,
@@ -38,26 +37,7 @@ const CommentsList = () => {
     };
 
     return (
-        <>
-            <CommentsContainer>
-                {commentsList.map((item) => (
-                    <CommentContainer key={item.key}>
-                        <span style={{ fontWeight: "600" }} >{item.user}</span> {item.comment}
-                    </CommentContainer>
-                ))}
-            </CommentsContainer >
-            <CommentBar>
-                <CommentInput
-                    id="comment"
-                    type="text"
-                    value={inputText}
-                    placeholder="Add a comment here"
-                    onChange={e => setInputText(e.target.value)}
-                    onKeyUp={handleKeyUp}
-                />
-                <CommentButton onClick={handleAddComment}>Post</CommentButton>
-            </CommentBar>
-        </>
+        <></>
     );
 };
 
